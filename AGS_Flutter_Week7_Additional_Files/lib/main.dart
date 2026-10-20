@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'screens/login_screen.dart';
+
+// ============================================================================
+// KANTINKU - MAIN.DART (Week 7: Form & Validation Update)
+// Alta Global School | IT Grade 10 & 11 (SHS)
+//
+// APP ARCHITECTURE:
+// 1. LoginScreen (screens/login_screen.dart) -> Entry screen & quick login
+// 2. SignUpScreen (screens/signup_screen.dart) -> Registration & Form validation (Week 7)
+// 3. MenuScreen (screens/menu_screen.dart) -> Canteen food catalog
+// 4. CartScreen (screens/cart_screen.dart) -> Order summary & checkout
+// ============================================================================
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Brew & Bite',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0284C7)),
+        useMaterial3: true,
+      ),
+      // LoginScreen is the initial screen of the app
+      home: const LoginScreen(),
+    );
+  }
+}
